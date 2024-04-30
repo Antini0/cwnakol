@@ -1,0 +1,6 @@
+@WYK6_HostAddress = http://localhost:5215
+
+GET {{WYK6_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

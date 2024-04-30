@@ -3,11 +3,10 @@ using WYK6.Models;
 
 namespace WYK6.Controllers;
 
-public class AnimalController
-{
+
     [ApiController]
-    [Route("/animals-controllers")]
-//[Route("[Controller]")]
+    // [Route("api/[controller]")]
+    [Route("[controller]")]
     public class AnimalsController : ControllerBase
     {
         
@@ -73,4 +72,3 @@ public class AnimalController
             return NoContent();
         }
     }
-}

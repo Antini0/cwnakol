@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddControllers().AddXmlSerializerFormatters();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -17,16 +17,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// var list = new List<int> { 1, 2, 3, 4, 5 };
-//
-// var evens = list.Where(n => n % 2 == 0); //linq
-//
-// foreach(int i in evens){
-//     Console.WriteLine(i);
-// }
 
-//app controllers
 app.MapControllers();
 
-app.Run();
 
+app.Run();
